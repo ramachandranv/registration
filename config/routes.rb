@@ -1,4 +1,8 @@
 Registration::Application.routes.draw do
+  get "students/index"
+
+  get "students/profile"
+
   devise_for :students
 
   # The priority is based upon order of creation:
