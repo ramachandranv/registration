@@ -1,8 +1,7 @@
 class StudentsController < ApplicationController
+  before_filter :authenticate_student!
+
   def index
   end
 
-  def profile
-  
-  end
 end

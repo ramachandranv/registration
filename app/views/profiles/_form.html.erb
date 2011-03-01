@@ -1,11 +1,10 @@
-<h1>Student Profile Information</h1>
 <%= form_for(@profile) do |f| %>
   <% if @profile.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+      <h2><%= pluralize(@profile.errors.count, "error") %> prohibited this profile from being saved:</h2>
 
       <ul>
-      <% @user.errors.full_messages.each do |msg| %>
+      <% @profile.errors.full_messages.each do |msg| %>
         <li><%= msg %></li>
       <% end %>
       </ul>
@@ -21,10 +20,13 @@
     <%= f.text_field :address %>
   </div>
   <div class="field">
-    <%= f.label :Mobile %><br />
+    <%= f.label :contact %><br />
     <%= f.text_field :contact %>
   </div>
-
+  <div class="field">
+    <%= f.label :sid %><br />
+    <%= f.text_field :sid %>
+  </div>
   <div class="actions">
     <%= f.submit %>
   </div>

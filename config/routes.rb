@@ -1,9 +1,13 @@
 Registration::Application.routes.draw do
-  get "students/index"
+  resources :profiles
 
-  get "students/profile"
+ # get "students/index"
+ 
+ # get "students/profile"
 
   devise_for :students
+
+  root :to => "students#index"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
